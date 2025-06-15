@@ -28,13 +28,13 @@ describe("GET /unknown", () => {
 
 describe("User Routes", () => {
   it("GET /user should return user object", async () => {
-    const res = await request(app).get("/user");
+    const res = await request(app).get("/users");
     expect(res.statusCode).toBe(200);
     expect(res.body).toEqual({ name: "Gurnav", role: "Developer" });
   });
 
   it("POST /user should return created message", async () => {
-    const res = await request(app).post("/user").send({});
+    const res = await request(app).post("/users").send({});
     expect(res.statusCode).toBe(201);
     expect(res.body.message).toBe("User created");
   });

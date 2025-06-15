@@ -10,11 +10,11 @@ app.get('/hello', (req, res) => {
     res.send('hello')
 })
 
-app.get("/user", (req, res) => {
+app.get("/users", (req, res) => {
   res.json({ name: "Gurnav", role: "Developer" });
 });
 
-app.post("/user", (req, res) => {
+app.post("/users", (req, res) => {
   res.status(201).json({ message: "User created" });
 });
 
