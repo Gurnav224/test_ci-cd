@@ -6,4 +6,8 @@ app.get("/", (req, res) => {
   res.send("Hello, CI/CD!");
 });
 
+app.get('/hello', (req, res) => {
+    res.send('hello')
+})
+
 module.exports = app;
